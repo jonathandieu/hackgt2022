@@ -10,9 +10,24 @@ async def root():
 @app.get("/users/me")
 async def read_user_me():
     return {"user_id": "the current user"}
-@app.get("/cards/chase")
-async def read_user_me():
+
+@app.get("/cards/chase/freedomflex")
+async def get_chase():
     return {
-        "credit_card": "the current credit card",
-        "bonus amount": 69
+        "card": "Freedom Flex",
+        "category": "Paypal and Walmart"
+    }
+
+@app.get("/cards/discover/discoverit")
+async def get_discover():
+    return {
+        "card": "Discover It",
+        "category": "Amazon.com and Digital Wallets"
+    }
+    
+@app.get("/cards/citi/dividend")
+async def get_citi():
+    return {
+        "card": "Citi Dividend",
+        "category": "Restaurants and Select Travel"
     }
